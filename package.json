@@ -19,6 +19,7 @@
   "style": "dist/firebaseui.css",
   "scripts": {
     "build": "gulp",
+    "build-install": "npm install && npm run build",
     "build-all": "gulp build-all",
     "build-soy": "gulp build-soy",
     "demo": "npm run build && ./buildtools/run_demo.sh",
