@@ -58,6 +58,10 @@ element.password.validate_ = function(passwordElement, errorElement) {
     element.setValid(passwordElement, true);
     element.hide(errorElement);
     return true;
+  } else if (password.length < 8) {
+    element.setValid(passwordElement, false);
+    element.show(errorElement, firebaseui.auth.soy2.strings.error({'code': 'auth/weak-password'}).toString());
+    return false;
   } else {
     element.setValid(passwordElement, false);
     element.show(errorElement,
